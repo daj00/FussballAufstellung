@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+<body>
+
+<a-scene>
+    <!-- Kamera -->
+    <a-entity position="0 5 10" rotation="-25 0 0">
+        <a-camera look-controls></a-camera>
+    </a-entity>
+
+    <!-- Spielfeld mit 45-Grad-Neigung von oben -->
+    <a-entity position="0 0 -5" rotation="-45 0 0">
+        <a-image src="1137.jpg" width="15" height="15"></a-image>
+    </a-entity>
+
+    <!-- Spieler in der 1-4-4-2-Formation -->
+    <!-- Torwart -->
+    <a-circle class="formation1" id="goalkeeper1" position="0 0.5 4" radius="0.3" color="blue"></a-circle>
+
+    <!-- Verteidiger -->
+    <a-circle class="formation1" id="defender1" position="-3 2 4" radius="0.3" color="yellow"></a-circle>
+    <a-circle class="formation1" id="defender2" position="-1 2 4" radius="0.3" color="yellow"></a-circle>
+    <a-circle class="formation1" id="defender3" position="1 2 4" radius="0.3" color="yellow"></a-circle>
+    <a-circle class="formation1" id="defender4" position="3 2 4" radius="0.3" color="yellow"></a-circle>
+
+    <!-- Mittelfeldspieler -->
+    <a-circle class="formation1" id="midfielder1" position="-2 2 0" radius="0.3" color="red"></a-circle>
+    <a-circle class="formation1" id="midfielder2" position="-1 2 0" radius="0.3" color="red"></a-circle>
+    <a-circle class="formation1" id="midfielder3" position="1 2 0" radius="0.3" color="red"></a-circle>
+    <a-circle class="formation1" id="midfielder4" position="2 2 0" radius="0.3" color="red"></a-circle>
+
+    <!-- Stürmer -->
+    <a-circle class="formation1" id="striker1" position="0 3 -6" radius="0.3" color="green"></a-circle>
+    <a-circle class="formation1" id="striker2" position="0 3 -6" radius="0.3" color="green"></a-circle>
+
+    <!-- Spieler in der 1-4-2-3-1-Formation -->
+    <!-- Torwart -->
+    <a-circle class="formation2" id="goalkeeper2" position="0 0.5 4" radius="0.3" color="blue"></a-circle>
+
+    <!-- Verteidiger -->
+    <a-circle class="formation2" id="defender5" position="-3 2 -4" radius="0.3" color="yellow"></a-circle>
+    <a-circle class="formation2" id="defender6" position="-1 2 -4" radius="0.3" color="yellow"></a-circle>
+    <a-circle class="formation2" id="defender7" position="1 2 -4" radius="0.3" color="yellow"></a-circle>
+    <a-circle class="formation2" id="defender8" position="3 2 -4" radius="0.3" color="yellow"></a-circle>
+
+    <!-- Defensives Mittelfeld -->
+    <a-circle class="formation2" id="dm1" position="-2 2 0" radius="0.3" color="red"></a-circle>
+    <a-circle class="formation2" id="dm2" position="2 2 0" radius="0.3" color="red"></a-circle>
+
+    <!-- Mittelfeldspieler -->
+    <a-circle class="formation2" id="midfielder5" position="-3 2 4" radius="0.3" color="red"></a-circle>
+    <a-circle class="formation2" id="midfielder6" position="0 2 4" radius="0.3" color="red"></a-circle>
+    <a-circle class="formation2" id="midfielder7" position="3 2 4" radius="0.3" color="red"></a-circle>
+
+    <!-- Stürmer -->
+    <a-circle class="formation2" id="striker3" position="0 3 6" radius="0.3" color="green"></a-circle>
+</a-scene>
+
+</body>
+</html>

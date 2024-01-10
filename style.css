@@ -1,0 +1,45 @@
+body {
+    margin: 0; /* Entfernt den Standardmargin des Body-Elements */
+    padding: 0; /* Entfernt den Standardpadding des Body-Elements */
+    background-image:url(stadion.jpg); /* Ersetze 'hintergrundbild.jpg' durch den tatsächlichen Dateinamen deines Bildes */
+    background-size: cover; /* Das Bild wird so skaliert, dass es den gesamten Hintergrund bedeckt */
+    background-position: center; /* Das Bild wird zentriert positioniert */
+    background-repeat: no-repeat; /* Verhindert das Wiederholen des Hintergrundbilds */
+    height: 100vh; /* 100% der Bildschirmhöhe */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #fff; /* Textfarbe auf Weiß setzen */
+}
+
+#playerForm {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+#playerForm label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#submitBtn {
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
