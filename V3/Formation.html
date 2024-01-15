@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+<body>
+    
+
+<a-scene>
+     <a-sky src="stadion.jpg"></a-sky>
+    <!-- Deine A-Frame-Szene geht hier hin -->
+    <!-- Kamera -->
+    <a-entity position="0 5 10" rotation="-25 0 0">
+        <a-camera look-controls></a-camera>
+    </a-entity>
+
+    <!-- Spielfeld mit 45-Grad-Neigung von oben -->
+    <a-entity position="0 0 -5" rotation="-45 0 0">
+        <a-image class="formation0" src="feld.jpg" width="15" height="15"></a-image>
+
+        <!-- Torwart -->
+        <a-plane position="0 -5.7 5" width=".5" height=".5" depth="1" color="grey"></a-plane>
+
+        <!-- Verteidigerpositionen -->
+        <a-plane id="LV" position="-3.5 -3 5" width=".5" height=".5" depth=".5" color="grey"></a-plane>
+        <a-plane id="LIV" position="-1.5 -4 5" width=".5" height=".5" depth=".5" color="grey"></a-plane>
+        <a-plane id="ZIV" position="0 -4.5 5" width=".5" height=".5" depth=".5" color="grey"></a-plane>
+        <a-plane id="RIV" position="1.5 -4 5" width=".5" height=".5" depth=".5" color="grey"></a-plane>
+        <a-plane id="RV" position="3.5 -3 5" width=".5" height=".5" depth=".5" color="grey"></a-plane>
+
+        <!-- Mittelfeldpositionen -->
+        <a-plane id="LDM" position="-1 -3 5" width=".5" height=".5" depth=".5" color="grey"></a-plane>
+        <a-plane id="RDM" position="1 -3 5" width=".5" height=".5" depth=".5" color="grey"></a-plane>
+        <a-plane id="LM" position="-3 -1.5 5" width=".5" height=".5" depth=".5" color="grey"></a-plane>
+        <a-plane id="ZOM" position="0 -2.5 5" width=".5" height=".5" depth=".5" color="grey"></a-plane>
+        <a-plane id="RM" position="3 -1.5 5" width=".5" height=".5" depth=".5" color="grey"></a-plane>
+        <a-plane id="ZM" position="0 -1.5 5" width=".5" height=".5" depth=".5" color="grey"></a-plane>
+
+        <!-- Stürmerpositionen -->
+        <a-plane id="ST" position="0 -0.5 5" width=".5" height=".5" depth=".5" color="grey"></a-plane>
+        <a-plane id="LS" position="-1.5 0.5 5" width=".5" height=".5" depth=".5" color="grey"></a-plane>
+        <a-plane id="RS" position="1.5 0.5 5" width=".5" height=".5" depth=".5" color="grey"></a-plane>
+        <a-plane id="MS" position="0 0.5 5" width=".5" height=".5" depth=".5" color="grey"></a-plane>
+    
+    </a-entity>
+
+</body>
+</html>

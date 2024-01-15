@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+<body>
+
+    <a-scene>
+        <!-- Kamera -->
+        <a-entity position="0 5 10">
+            <a-camera look-controls></a-camera>
+        </a-entity>
+
+        <!-- Spielfeld mit 45-Grad-Neigung von oben -->
+        <a-entity position="0 0 -5" rotation="-45 0 0">
+            <a-image src="1137.jpg" width="15" height="15"></a-image>
+        </a-entity>
+
+        <!-- Initialisiere Spieler in der 2-4-4-Formation -->
+        <!-- Stürmer -->
+        <a-circle id="striker1" position="-2 3 -6" radius="0.3" color="blue"></a-circle>
+        <a-circle id="striker2" position="2 3 -6" radius="0.3" color="blue"></a-circle>
+
+        <!-- Mittelfeldspieler -->
+        <a-circle id="midfielder1" position="-3 2 0" radius="0.3" color="red"></a-circle>
+        <a-circle id="midfielder2" position="-1 2 0" radius="0.3" color="red"></a-circle>
+        <a-circle id="midfielder3" position="1 2 0" radius="0.3" color="red"></a-circle>
+        <a-circle id="midfielder4" position="3 2 0" radius="0.3" color="red"></a-circle>
+
+        <!-- Verteidiger -->
+        <a-circle id="defender1" position="-3 2 4" radius="0.3" color="yellow"></a-circle>
+        <a-circle id="defender2" position="-1 2 4" radius="0.3" color="yellow"></a-circle>
+        <a-circle id="defender3" position="1 2 4" radius="0.3" color="yellow"></a-circle>
+        <a-circle id="defender4" position="3 2 4" radius="0.3" color="yellow"></a-circle>
+
+        <!-- Torhüter -->
+        <a-circle id="goalkeeper" position="0 0.5 4" radius="0.3" color="violet"></a-circle>
+
+        <!-- Button zum Wechseln der Formation -->
+        <button onclick="toggleFormation()" style="position: absolute; z-index: 1; background-color: #af704c; color: white; border: none; padding: 10px 20px; cursor: pointer;">Formation wechseln</button>
+
+        
+    </a-scene>
+
+</body>
+</html>
